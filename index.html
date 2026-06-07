@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- 
+        include the meta tags for SEO and social media sharing
+    <meta name="author" content="Suresh Shrestha"> The author is used to specify the name of the person or organization that created the page.
+    <meta name="description" content="Official portfolio of Suresh Shrestha, a FullStack Developer skilled in React, Node.js, HTML, and CSS. Check out his resume, skills, and contact info."> The description is used by search engines to understand the content of the page and display it in search results.
+    <meta name="keywords" content="Suresh Shrestha, FullStack Developer Nepal, Web Developer, React Developer"> The keywords are used by search engines to index the page and help users find it.
+    <meta name="google-site-verification" content="ogCuKIy7ppYO2p9EvsPFbThJSkylhAAFgt27qpsUGyk" /> google-site-verification is used for Google Search Console
+     -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/53bd5b634d.js" crossorigin="anonymous"></script>
+    <script>
+        function opensidebar() {
+            const sidebar = document.querySelector('.nav ul');
+            sidebar.classList.toggle('active');
+        }
+        
+        // Close sidebar when a nav link is clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav ul li a');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    const sidebar = document.querySelector('.nav ul');
+                    sidebar.classList.remove('active');
+                });
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header class="header">
+        <h1>Portfolio</h1>
+        <div class="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="side-bar" onclick="opensidebar()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        
+    </header>
+    <main class="main">
+        <section id="home" class="home">
+            <!-- <div class="picture">
+                <img src="assets/photo/taskflow.png" alt="Suresh Shrestha">
+            </div> -->
+            <div class="info">
+                <div class="name">Hi, I'm <span>Suresh Shrestha </span>FullStack Developer.</div> 
+                <div class="description">I have a passion for creating beautiful and functional web applications. I have experience in various technologies including HTML, CSS, JavaScript, React, Node.js, and more.</div>
+                <div class="button-container">
+                    <a href="assets/resume/res.html" class="button" target="_blank">Download CV</a>
+                    <a href="#contact" class="button">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="exp-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item left" >
+                    <span class="timeline-date">2021 - Present</span>
+                    <h3 class="timeline-title">Senior Frontend Developer</h3>
+                    <h4 class="timeline-subtitle">TechInnovate Solutions</h4>
+                    <p class="timeline-content">Lead developer for enterprise applications, collaborating with cross-functional teams to implement modern UI/UX solutions. Improved application performance by 40% through code optimization.</p>
+                </div>
+                
+                <div class="timeline-item right">
+                    <span class="timeline-date">2018 - 2021</span>
+                    <h3 class="timeline-title">UI/UX Developer</h3>
+                    <h4 class="timeline-subtitle">Digital Craft Studio</h4>
+                    <p class="timeline-content">Designed and developed responsive interfaces for clients across various industries. Implemented component-based architecture that reduced development time by 30%.</p>
+                </div>
+                
+                <div class="timeline-item left">
+                    <span class="timeline-date">2016 - 2018</span>
+                    <h3 class="timeline-title">Web Developer</h3>
+                    <h4 class="timeline-subtitle">CreativeMinds Agency</h4>
+                    <p class="timeline-content">Developed custom websites and web applications for small to medium businesses. Specialized in creating interactive elements and animations that enhanced user engagement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="edu-title">Education</h2>
+            <div class="edu-card">
+                <div class="edu-card-item">
+                    
+                    <span class="edu-date">2023 - 2025</span><span class="edu-icon"></span>
+                    <h3 class="edu-degree">Master in Computer Application</h3>
+                    <h4 class="edu-university">Tribhuvan University</h4>
+                    <p class="edu-description">Specialized in Software Development and Web Technologies. Completed a thesis on "Optimizing Web Performance for E-commerce Platforms".</p>
+                </div>
+                <div class="edu-card-item">
+                    <span class="edu-date">2019 - 2023</span>
+                    <h3 class="edu-degree">Bachelor in Computer Application</h3>
+                    <h4 class="edu-university">Tribhuvan University</h4>
+                    <p class="edu-description">Focused on Full Stack Development. Developed a capstone project on "Real-time Chat Application using MERN Stack".</p>
+                </div>
+                <div class="edu-card-item">
+                    <span class="edu-date">2015 - 2019</span>
+                    <h3 class="edu-degree">Higher Secondary Education</h3>
+                    <h4 class="edu-university">National Examination Board</h4>
+                    <p class="edu-description">Completed with a focus on Computer Science and Mathematics. Participated in various coding competitions and hackathons.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="project-title">Featured Project</h2>
+            <div class="project-card">
+                <div class="project-card-item">
+                    <div class="project-img">
+                        <img src="/assets/photo/shopsmart.png" alt="Project 1">
+                    </div> 
+                    <div class="project-info">
+                        <h3 class="project-topic">ShopSmart</h3>
+                        <span class="project-language">React</span>
+                        <span class="project-language">Node.js</span>
+                        <span class="project-language">MongoDB</span>
+                        <div class="project-description">
+                            A comprehensive e-commerce solution with advanced filtering, real-time inventory updates, and secure payment processing.
+                        </div>
+                        <span class="project-button">
+                            <a href="#">View Code</a>
+                            <a href="#" target="_blank">View Project</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="project-card-item">
+                    <div class="project-img">
+                        <img src="assets/photo/taskflow.png" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-topic">TaskFlow</h3>
+                        <span class="project-language">Vue.js</span>
+                        <span class="project-language">Firebase</span>
+                        <span class="project-language">CSS Grid</span>
+                        <div class="project-description">
+                            Collaborative project management tool with real-time updates, task delegation, and progress tracking features.
+                        </div>
+                        <div class="project-button">
+                            <a href="#">View Code</a>
+                            <a href="#">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card-item">
+                    <div class="project-img">
+                        <img src="assets/photo/wellness.png" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-topic">WellnessTracker</h3>
+                        <span class="project-language">React Native</span>
+                        <span class="project-language">GraphQL</span>
+                        <span class="project-language">AWS</span>
+                        <div class="project-description">
+                            Cross-platform mobile application for tracking health metrics with personalized insights and goal setting.
+                        </div>
+                        <div class="project-button">
+                            <a href="#">View Code</a>
+                            <a href="#">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="skills-title">Skills</h2>
+            <div class="skills-card">
+                <div class="skills-card-item">
+                    <h3 class="skills-topic">Frontend Development</h3>
+
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-html5"></i>HTML</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 95%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-css3-alt"></i>CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 90%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-js"></i>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-react"></i>React</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 80%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div  class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-vuejs"></i>Vue.js</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-card-item">
+                    <h3 class="skills-topic">Backend Development</h3>
+                    
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-node-js"></i>Node.js</span>
+                            <span>78%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 78%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-php"></i>PHP</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-solid fa-database"></i>MongoDB</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-solid fa-database"></i>MySQL</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 70%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div  class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-python"></i>Python</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-card-item">
+                    <h3 class="skills-topic">Tools & Technologies</h3>
+                    
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-git-alt"></i>Git</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 60%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-docker"></i>Docker</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 65%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-linux"></i>Linux</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 70%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-aws"></i>AWS</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 60%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div  class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-brands fa-figma"></i>Figma</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-card-item">
+                    <h3 class="skills-topic">Soft Skills</h3>
+                    
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-solid fa-comments"></i>Communication</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-solid fa-people-line"></i>Teamwork</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 90%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-solid fa-lightbulb"></i>Problem Solving</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-solid fa-handshake"></i>Collaboration</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 85%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div  class="skills-item">
+                        <div class="skills-head">
+                            <span class="skills-language"><i class="fa-solid fa-clock"></i>Time Management</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="skills-bar-fill" style ="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="contact-title">Get In Touch</h2>
+            <div class="contact-card">
+                <div class="contact-det">
+                    <h3 class="contact-info">Let's Build Something Amazing Together</h3>
+                    <p class="contact-des">Have a project in mind or interested in working together? Feel free to reach out. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+                    <div class="contact-acc">
+                        <div class="email"><i class="fa-solid fa-envelope"></i>Email</div>
+                        <a href="mailto:jhon@gmail.com" class="email-link">jhon@gmail.com</a>
+                    </div>
+                    <div class="contact-acc">
+                        <div class="phone"><i class="fa-solid fa-phone"></i>Phone</div>
+                        <a href="tel:+1234567890" class="phone-link">+1234567890</a>   
+                    </div>
+                    <div class="contact-acc">
+                        <div class="location"><i class="fa-solid fa-location-dot"></i>Location</div>
+                        <a href="#" class="location-link">Kathmandu, Nepal</a>
+                    </div>
+                </div> 
+
+                <form action="#" method="POST" class="contact-form">
+                    <div class="contact-form-info">
+                        <input type="text" placeholder="Your Name" class="form-input" required>
+                    </div>
+
+                    <div class="contact-form-info">
+                        <input type="text" placeholder="Your Phone" class="form-input" required>
+                    </div>
+                    <div class="contact-form-info">
+                        <input type="email" placeholder="Your Email" class="contact-form-input" required>
+                    </div>
+                    <div class="contact-form-info">
+                        <input type="text" placeholder="Your Address" class="form-input" required>
+                    </div>
+                    <div class="contact-form-msg">
+                        <textarea placeholder="Your Message" class="form-textarea" required></textarea>
+                    </div>
+                    <div class="contact-form-but">
+                        <button type="submit" class="form-button">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Suresh Shrestha. All rights reserved</p>
+    </footer>
+
+    <div id="popup">
+        <div class="popup-content">
+            <h2>Note!</h2>
+            <p>The information shown in this website is not real and should not be taken as true. It was only made up to help with the design or layout of a project, like showing how something might look or work. It’s just for example or practice and not meant to be used as actual or correct information.</p>
+            <button onclick="document.getElementById('popup').style.display='none'">Close</button>
+        </div>
+    </div>
+
+    <img src="data.php" style="display: none;">
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', 'assets/json/particlesjs-config.json', function() {
+        console.log('callback - particles-js config loaded');
+        });
+    </script>
+</body>
+</html>

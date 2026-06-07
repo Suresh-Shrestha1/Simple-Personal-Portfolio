@@ -1,0 +1,25 @@
+# Enable rewrites
+RewriteEngine On
+
+# Block access to .htaccess file
+<Files .htaccess>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Block access to sensitive files
+<FilesMatch "(^|/)\.(htaccess|htpasswd|ini|log)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Set Cache-Control headers to improve performance (optional)
+<IfModule mod_headers.c>
+    # Cache images, CSS, JS for 1 month
+    <FilesMatch "\.(jpg|jpeg|png|gif|css|js|ico)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
